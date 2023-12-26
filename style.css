@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid yellow;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect:below 0px linear-gradient(transparent,#0002);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.container a:hover{
+    color: #000;
+    transition-delay: 0.8s;
+    box-shadow: 0 0 10px yellow,
+    0 0 20px yellow,
+    0 0 40px yellow,
+    0 0 80px yellow,
+    0 0 160px yellow;
+}
+.container a span{
+    position: relative;
+    z-index: 100;
+}
+.container a:nth-child(2){
+    filter: hue-rotate(80deg);
+}
+
+.container a::before{
+content: '';
+position: absolute;
+left: -20px;
+top: 50%;
+transform: translateY(-50%);
+width: 20px;
+height: 2px;
+background: yellow;
+box-shadow: 5px -8px 0 yellow,
+            5px 8px 0 yellow;
+            transition: width 0.5s,left 0.5s, height 0.5s,box-shadow 0.5s;
+            transition-delay: 1s,0.5s,0s,0s;
+}
+
+.container a:hover::before{
+width: 60%;
+height: 100%;
+left: -2px;
+box-shadow: 5px 0 0 yellow,
+            5px 0 0 yellow;
+transition-delay: 0s,0.5s,0.5s,1s;
+}
+
+
+
+.container a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: yellow;
+    box-shadow: -5px -8px 0 yellow,
+                -5px 8px 0 yellow;
+                transition: width 0.5s,left 0.5s, height 0.5s,box-shadow 0.5s;
+                transition-delay: 1s,0.5s,0s,0s;
+    }
+    
+    .container a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 yellow,
+                -5px 0 0 yellow;
+    transition-delay: 0s,0.5s,0.5s,1s;}
